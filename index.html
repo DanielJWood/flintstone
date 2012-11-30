@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+      <script src='http://api.tiles.mapbox.com/mapbox.js/v0.6.6/mapbox.js'></script>
+  <link href='http://api.tiles.mapbox.com/mapbox.js/v0.6.6/mapbox.css' rel='stylesheet' />
+    <title>Fred's Shirt</title>
+    <style type="text/css">
+body { 
+font-family: 'Gothic', sans-serif;
+background-color: #de6900;
+}
+#map {
+  top:0;
+  right:0;
+  position: absolute;
+  height:100%;
+  width:100%;
+  z-index:-1;
+}
+
+h1 {
+ font-size:60px; 
+ letter-spacing:5px;
+ color:#00ABE3;
+ margin:0px;
+ margin-top:20px;
+ text-shadow:1px 1px 13px #000;
+ 
+}
+
+#fred {
+  position: fixed;
+  top:50px;
+  left: 10px;
+}
+    </style>
+</head>
+<body>
+      <div id='map'>
+    </div> 
+
+    <div id='heading'>
+        <div id='titler'>
+            <h1>YABADABADOO</h1>
+        </div>
+    </div>
+    <div id='fred'>
+      <img src="fred.png">
+    </div>
+    <script type='text/javascript'> 
+    var map = mapbox.map('map');
+    map.addLayer(mapbox.layer().id('danwood.flintstone'));
+    map.centerzoom({ lat: 70, lon: -92.03 }, 4);
+    map.ui.hash;
+    </script>    
+
+  </body>
+</html>
